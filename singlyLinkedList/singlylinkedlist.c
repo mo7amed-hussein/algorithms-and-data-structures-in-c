@@ -71,8 +71,8 @@ void printSinglyList(nodePtr head)
             return;
      if(*head == node)
      {
+         *head = node->next;
          free(node);
-         *head = NULL;
      }
      else
      {
@@ -83,4 +83,22 @@ void printSinglyList(nodePtr head)
          p->next = node->next;
          free(node);
      }
+ }
+
+ nodePtr find(nodePtr head,int data)
+ {
+     if(head != NULL)
+     {
+         nodePtr p = head;
+         while(p !=NULL )
+         {
+             if(p->data == data)
+             {
+                 return p;
+             }
+             p = p->next;
+         }
+
+     }
+      return NULL;
  }
