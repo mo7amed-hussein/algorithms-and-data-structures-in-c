@@ -19,10 +19,10 @@ void printSinglyList(nodePtr head);
 
 /**
  * @brief  insert new element to a singly list
- * @param nodePtr list head
+ * @param nodePtr* list head
  * @param int element data
  */
- void insert(nodePtr head,int data);
+ void insert(nodePtr *head,int data);
 
  /**
  * @brief  insert new element to a singly list after specific node
