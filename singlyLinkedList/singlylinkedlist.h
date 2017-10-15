@@ -26,11 +26,11 @@ void printSinglyList(nodePtr head);
 
  /**
  * @brief  insert new element to a singly list after specific node
- * @param nodePtr list head
+ * @param nodePtr* list head
  * @param nodePtr node pointer
  * @param int element data
  */
- void insertAt(nodePtr head,nodePtr node,int data);
+ void insertAt(nodePtr *head,nodePtr node,int data);
 
  /**
   *@brief  delete node from a singly list

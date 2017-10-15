@@ -45,3 +45,22 @@ void printSinglyList(nodePtr head)
          p->next = node;
      }
  }
+
+ void insertAt(nodePtr *head,nodePtr node,int data)
+ {
+     //allocate node
+     nodePtr tmp=(nodePtr)malloc(sizeof(Node));
+
+     tmp->data = data;
+      if( *head == NULL)
+     {
+         tmp->next =NULL;
+         *head = tmp;
+     }
+     else
+     {
+          tmp->next = node->next;
+          node->next = tmp;
+     }
+
+ }
