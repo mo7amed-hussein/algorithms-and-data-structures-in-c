@@ -62,10 +62,14 @@ nodePtr find(nodePtr head,int data);
 
  /**
  * @brief  update node data in a singly list
- * @param nodePtr list head
  * @param nodePtr node pointer
  * @param int element new data
  */
- void update(nodePtr head,nodePtr node,int data);
+ void update(nodePtr node,int data);
 
+  /**
+ * @brief  clear a singly list
+ * @param nodePtr * list head
+ */
+ void clear(nodePtr*head);
 #endif // LINKEDLIST_H_INCLUDED
