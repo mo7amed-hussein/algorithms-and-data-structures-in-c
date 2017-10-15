@@ -159,3 +159,9 @@ void printSinglyList(nodePtr head)
 
      }
  }
+
+  void update(nodePtr node,int data)
+  {
+      if(node !=NULL)
+            node->data = data;
+  }
