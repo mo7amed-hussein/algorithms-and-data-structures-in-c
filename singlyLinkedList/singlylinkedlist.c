@@ -64,3 +64,23 @@ void printSinglyList(nodePtr head)
      }
 
  }
+
+ void delete(nodePtr* head,nodePtr node)
+ {
+     if( *head == NULL)
+            return;
+     if(*head == node)
+     {
+         free(node);
+         *head = NULL;
+     }
+     else
+     {
+         nodePtr p = *head;
+         //find last node in the list
+         for(p ; p->next != node ; p=p->next);
+
+         p->next = node->next;
+         free(node);
+     }
+ }

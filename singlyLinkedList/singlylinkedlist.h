@@ -37,7 +37,7 @@ void printSinglyList(nodePtr head);
  * @param nodePtr list head
  * @param nodePtr node pointer
   */
-void delete(nodePtr head,nodePtr node);
+void delete(nodePtr* head,nodePtr node);
 
 /**
  * @brief find element in singly list
