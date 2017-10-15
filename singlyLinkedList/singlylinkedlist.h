@@ -72,4 +72,12 @@ nodePtr find(nodePtr head,int data);
  * @param nodePtr * list head
  */
  void clear(nodePtr*head);
+
+ /**
+ * @brief  insert new element to a singly list front
+ * @param nodePtr* list head
+ * @param int element data
+ */
+ void insertFront(nodePtr *head,int data);
+
 #endif // LINKEDLIST_H_INCLUDED

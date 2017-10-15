@@ -177,3 +177,22 @@ void clear(nodePtr*head)
     }
     *head = NULL;
 }
+
+ void insertFront(nodePtr *head,int data)
+ {
+     //allocate node
+     nodePtr tmp=(nodePtr)malloc(sizeof(Node));
+
+     tmp->data = data;
+     if(*head == NULL)
+     {
+         tmp->next = NULL;
+         *head = tmp;
+     }
+     else
+     {
+         tmp->next = (*head);
+         (*head) = tmp;
+     }
+
+ }
