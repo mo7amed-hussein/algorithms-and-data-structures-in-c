@@ -102,3 +102,22 @@ void printSinglyList(nodePtr head)
      }
       return NULL;
  }
+
+ nodePtr reverse(nodePtr head)
+ {
+       if( head == NULL)
+            return;
+
+        nodePtr p = head->next ,tmp;
+        head->next = NULL;
+        while(p->next != NULL)
+        {
+          tmp = p;
+          p = p->next;
+            tmp->next = head;
+            head = tmp;
+        }
+        p->next = head;
+        //head->next = NULL;
+        return p;
+ }
