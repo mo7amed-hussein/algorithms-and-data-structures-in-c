@@ -27,3 +27,14 @@
           return top->data;
       }
   }
+
+   int pop(nodePtr*top)
+   {
+       if( *top == NULL)
+            return -1;
+          int data = (*top)->data;
+          nodePtr p = *top ;
+          *top = p->next;
+          free(p);
+          return data;
+   }
