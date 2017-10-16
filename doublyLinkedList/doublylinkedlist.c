@@ -24,16 +24,16 @@ void printForward(nodePtr head)
     }
     printf(" ]\n");
 }
-void printBackward(nodePtr tail)
+void printBackward(nodePtr head)
 {
     //check if list is empty
-    if(tail == NULL)
+    if(head == NULL)
     {
         puts("an empty list");
       return;
     }
-     //traverse pointer
-    nodePtr p =  tail;
+    nodePtr p =head;
+    for(p ; p->next != NULL ; p=p->next);
     printf("[ ");
     while(p!= NULL)
     {
