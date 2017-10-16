@@ -254,3 +254,15 @@ void printBackward(nodePtr head)
            node->data = data;
        }
    }
+
+   void clear(nodePtr*head)
+   {
+       nodePtr p= *head,tmp;
+    while(p != NULL)
+    {
+        tmp = p;
+        p=p->next;
+        free(tmp);
+    }
+    *head = NULL;
+   }
