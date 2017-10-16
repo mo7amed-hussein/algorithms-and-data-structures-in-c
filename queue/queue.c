@@ -38,3 +38,15 @@
           free(p);
           return data;
   }
+
+  void clear(nodePtr*top)
+ {
+     nodePtr p= *top,tmp;
+    while(p != NULL)
+    {
+        tmp = p;
+        p=p->next;
+        free(tmp);
+    }
+    *top = NULL;
+ }
