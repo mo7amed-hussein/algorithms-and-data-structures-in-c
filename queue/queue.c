@@ -17,3 +17,13 @@
          p->next = tmp;
     }
  }
+
+ int peek(nodePtr top)
+ {
+     if( top == NULL)
+            return -1;
+      else
+      {
+          return top->data;
+      }
+ }
