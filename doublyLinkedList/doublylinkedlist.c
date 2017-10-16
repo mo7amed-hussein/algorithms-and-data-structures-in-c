@@ -168,3 +168,21 @@ void printBackward(nodePtr head)
          free(p);
          return data;
   }
+
+  nodePtr find(nodePtr head,int data)
+  {
+       if(head != NULL)
+     {
+         nodePtr p = head;
+         while(p !=NULL )
+         {
+             if(p->data == data)
+             {
+                 return p;
+             }
+             p = p->next;
+         }
+
+     }
+      return NULL;
+  }
