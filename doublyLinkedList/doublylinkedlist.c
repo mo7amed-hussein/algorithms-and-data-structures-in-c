@@ -149,3 +149,22 @@ void printBackward(nodePtr head)
         *head=p;
         return data;
   }
+
+  int deleteLast(nodePtr* head)
+  {
+    if(*head == NULL)
+            return -1;
+         nodePtr p = (*head);
+         for(p ; p->next != NULL ; p=p->next);
+         int data = p->data;
+         if(p == *head)
+         {
+             *head = NULL;
+         }
+         else
+         {
+            p->prev->next = NULL;
+         }
+         free(p);
+         return data;
+  }

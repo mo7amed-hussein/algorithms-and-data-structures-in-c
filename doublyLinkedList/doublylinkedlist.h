@@ -54,10 +54,10 @@ int deleteFront(nodePtr* head);
 
 /**
   *@brief  delete node from a doubly list end
- * @param nodePtr* list tail
+ * @param nodePtr* list head
  * @return int element data
   */
-int deleteLast(nodePtr* tail);
+int deleteLast(nodePtr* head);
 
 /**
  * @brief find element in doubly list
