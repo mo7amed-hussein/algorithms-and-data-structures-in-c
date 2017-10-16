@@ -1,8 +1,9 @@
-it is my implemenation for the most common data strucures using c language
+it is my implemenation for the most common data strucures and algorithms using c language
 
-available implemenations are
-============================
-	- Linked list 
+available data stuctures implemenations are
+===========================================
+	- singly Linked list
+	- doubly linked list
 	- stack 
 	- queue
 
