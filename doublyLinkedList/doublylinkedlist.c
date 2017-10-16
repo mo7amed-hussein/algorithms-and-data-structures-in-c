@@ -104,3 +104,32 @@ void printBackward(nodePtr head)
          *head = tmp;
      }
   }
+
+  void delete(nodePtr* head,int data)
+  {
+      if(*head == NULL)
+            return;
+      nodePtr p = *head;
+       if( p->data == data)
+        {
+                p= p->next;
+                p->prev = NULL;
+                free(*head);
+                *head = p;
+        }
+      while( p != NULL)
+      {
+          if(p->data == data)
+          {
+              break;
+          }
+          p = p->next;
+      }
+      if(p != NULL)
+      {
+        nodePtr prev = p->prev;
+        prev->next = p->next;
+        p->next->prev = prev;
+        free(p);
+      }
+  }
