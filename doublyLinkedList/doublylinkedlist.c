@@ -133,3 +133,19 @@ void printBackward(nodePtr head)
         free(p);
       }
   }
+
+  int deleteFront(nodePtr* head)
+  {
+      if(*head == NULL)
+            return -1;
+
+        nodePtr p = (*head)->next;
+        if(p != NULL)
+        {
+             p->prev = NULL;
+        }
+        int data =  (*head)->data;
+        free(*head);
+        *head=p;
+        return data;
+  }
