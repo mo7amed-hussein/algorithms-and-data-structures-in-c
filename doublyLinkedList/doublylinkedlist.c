@@ -186,3 +186,25 @@ void printBackward(nodePtr head)
      }
       return NULL;
   }
+
+  nodePtr reverse(nodePtr head)
+  {
+      if(head == NULL)
+            return NULL;
+       nodePtr p = head;
+        for(p ; p->next != NULL ; p=p->next);
+        nodePtr  prev = p->prev ,newHead =p,tmp;
+        p->prev = NULL;
+        while(prev->prev != NULL)
+        {
+            p->next = prev;
+            tmp = prev->prev;
+           prev->prev= p;
+            p= prev;
+            prev = tmp;
+        }
+        prev->next = NULL;
+        prev->prev = p;
+        p->next = prev;
+        return newHead;
+  }
