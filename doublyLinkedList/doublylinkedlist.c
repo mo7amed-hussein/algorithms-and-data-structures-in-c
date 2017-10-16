@@ -46,3 +46,22 @@ void printBackward(nodePtr tail)
     }
     printf(" ]\n");
 }
+
+ void insert(nodePtr *head,int data)
+ {
+     nodePtr node = (nodePtr)malloc(sizeof(Node));
+     node->data = data;
+     node->next = NULL;
+    if( *head == NULL)
+     {
+
+         *head = node;
+     }
+     else
+     {
+         nodePtr p =*head;
+         for(p ; p->next != NULL ; p=p->next);
+         node->prev = p;
+         p->next = node;
+     }
+ }
