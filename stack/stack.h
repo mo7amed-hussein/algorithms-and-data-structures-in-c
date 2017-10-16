@@ -27,10 +27,10 @@ typedef struct _node *nodePtr;
 
   /**
  * @brief get top element from stack
- * @param nodePtr * stack top
+ * @param nodePtr stack top
  * @return int data
  */
- int peek(nodePtr*top);
+ int peek(nodePtr top);
 
 /**
  * @brief  clear stack
