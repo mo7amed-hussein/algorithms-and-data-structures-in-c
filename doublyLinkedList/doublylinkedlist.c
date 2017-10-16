@@ -54,7 +54,7 @@ void printBackward(nodePtr head)
      node->next = NULL;
     if( *head == NULL)
      {
-
+        node->prev = NULL;
          *head = node;
      }
      else
