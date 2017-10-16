@@ -84,3 +84,23 @@ void printBackward(nodePtr head)
          node->next = tmp;
      }
  }
+
+  void insertFront(nodePtr *head,int data)
+  {
+    nodePtr tmp = (nodePtr)malloc(sizeof(Node));
+     tmp->data = data;
+     if( *head == NULL)
+     {
+         tmp->next =NULL;
+         tmp->prev = NULL;
+         *head = tmp;
+     }
+     else
+     {
+         nodePtr node = *head;
+         node->prev = tmp;
+         tmp->next = node;
+         tmp->prev = NULL;
+         *head = tmp;
+     }
+  }
