@@ -208,3 +208,41 @@ void printBackward(nodePtr head)
         p->next = prev;
         return newHead;
   }
+
+   void sort(nodePtr head)
+   {
+       nodePtr last =NULL,p,prev;
+     p= head;
+     int data;
+     if(head == NULL)
+        return;
+     while(head->next !=last)
+     {
+         p=head;
+        // prev = p;
+         while(p->next != last)
+         {
+             if(p->data > p->next->data)
+             {
+                 data = p->next->data;
+                p->next->data = p->data;
+                p->data = data;
+             }
+            // prev =p;//keep preceded node
+             p=p->next;
+         }
+         last = p;
+     }
+     //check two remaining nodes if there
+     if(head->next != NULL)
+     {
+          p=head;
+          if(p->data > p->next->data)
+             {
+                 data = p->next->data;
+                p->next->data = p->data;
+                p->data = data;
+             }
+
+     }
+   }
